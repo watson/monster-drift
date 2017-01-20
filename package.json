@@ -1,7 +1,7 @@
 {
   "name": "monster-drift",
   "version": "0.1.0",
-  "description": "Drive a remote controlled monster car with Node.js and HackRF",
+  "description": "Drive a remote controlled drift car with Node.js and HackRF",
   "main": "index.js",
   "dependencies": {
     "debug": "^2.6.0",
