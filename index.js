@@ -45,8 +45,8 @@ MonsterDrift.prototype.uturn = function (cb) {
   var self = this
   this.forward()
   setTimeout(function () {
-    if (Math.random() < 0.5) self._drive(signal.r)
-    else self._drive(signal.l)
+    if (Math.random() < 0.5) self.right()
+    else self.left()
     setTimeout(function () {
       self.backward()
       setTimeout(function () {
@@ -88,6 +88,14 @@ MonsterDrift.prototype.close = function (cb) {
   this._device.stopTx(function () {
     self._device.close(cb)
   })
+}
+
+MonsterDrift.prototype.left = function () {
+  this._drive(signal.l)
+}
+
+MonsterDrift.prototype.right = function () {
+  this._drive(signal.r)
 }
 
 MonsterDrift.prototype.forward = function () {
