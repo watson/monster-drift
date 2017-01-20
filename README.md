@@ -6,6 +6,8 @@ beta software.
 [![Build status](https://travis-ci.org/watson/monster-drift.svg?branch=master)](https://travis-ci.org/watson/monster-drift)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
+[![uturn](http://img.youtube.com/vi/XtUH5GbOzug/0.jpg)](https://www.youtube.com/embed/XtUH5GbOzug)
+
 ## Installation
 
 ```
