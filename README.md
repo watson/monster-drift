@@ -79,6 +79,10 @@ Stop the car.
 
 Close the HackRF radio.
 
+### `drive.uturn([callback])`
+
+Make a uturn. Calls `callback` when done.
+
 ## License
 
 MIT
