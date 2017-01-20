@@ -1,7 +1,7 @@
 # monster-drive
 
-Drive a remote controlled monster car with Node.js and HackRF. This is
-beta software.
+📻🏎 Drive a remote controlled drift car with Node.js and HackRF.
+This is beta software.
 
 [![Build status](https://travis-ci.org/watson/monster-drift.svg?branch=master)](https://travis-ci.org/watson/monster-drift)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
