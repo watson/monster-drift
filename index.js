@@ -41,6 +41,21 @@ function MonsterDrift (opts) {
   this._device.setFrequency(this._freq)
 }
 
+MonsterDrift.prototype.uturn = function (cb) {
+  var self = this
+  this.forward()
+  setTimeout(function () {
+    if (Math.random() < 0.5) self._drive(signal.r)
+    else self._drive(signal.l)
+    setTimeout(function () {
+      self.backward()
+      setTimeout(function () {
+        cb()
+      }, 1000)
+    }, 200)
+  }, 1000)
+}
+
 MonsterDrift.prototype.start = function () {
   var self = this
   debug('starting')
