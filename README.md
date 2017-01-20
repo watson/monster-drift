@@ -30,7 +30,7 @@ setTimeout(function () {
 
 ## API
 
-### `var drive = new MonsterDrift(options)`
+### `var drive = new MonsterDrift([options])`
 
 This module exposes a `MonsterDrift` object that you can initiate to get
 a `drive` object.
