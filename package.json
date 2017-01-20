@@ -1,0 +1,28 @@
+{
+  "name": "monster-drift",
+  "version": "0.0.0",
+  "description": "Drive a remote controlled monster car with Node.js and HackRF",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^2.6.0",
+    "hackrf": "^3.1.1",
+    "keypress": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watson/monster-drift.git"
+  },
+  "keywords": [
+    "hackrf"
+  ],
+  "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watson/monster-drift/issues"
+  },
+  "homepage": "https://github.com/watson/monster-drift#readme"
+}
