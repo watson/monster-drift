@@ -37,8 +37,22 @@ function MonsterDrift (opts) {
   this._stream = null
 
   this._device = devices.open(opts.id || 0)
-  this._device.setTxGain(opts.gain || 40) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
+  this._device.setTxGain(opts.gain || 47) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
   this._device.setFrequency(this._freq)
+}
+
+MonsterDrift.prototype.uturn = function (cb) {
+  var self = this
+  this.forward()
+  setTimeout(function () {
+    self._drive(signal.r)
+    setTimeout(function () {
+      self.backward()
+      setTimeout(function () {
+        cb()
+      }, 1000)
+    }, 200)
+  }, 1000)
 }
 
 MonsterDrift.prototype.start = function () {
