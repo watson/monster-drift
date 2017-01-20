@@ -1,6 +1,6 @@
 {
   "name": "monster-drift",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Drive a remote controlled monster car with Node.js and HackRF",
   "main": "index.js",
   "dependencies": {
@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/watson/monster-drift/issues"
   },
-  "homepage": "https://github.com/watson/monster-drift#readme"
+  "homepage": "https://github.com/watson/monster-drift#readme",
+  "coordinates": [
+    47.5156232,
+    19.0529081
+  ]
 }
