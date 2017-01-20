@@ -8,6 +8,7 @@
     "hackrf": "^3.1.1"
   },
   "devDependencies": {
+    "keypress": "^0.2.1",
     "standard": "^8.6.0"
   },
   "scripts": {
