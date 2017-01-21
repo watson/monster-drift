@@ -80,9 +80,10 @@ Drive backward and turn left.
 Stop the car and turn off transmitter. Calls optional `callback` when
 done.
 
-### `drive.close()`
+### `drive.close([callback])`
 
-Close the HackRF radio.
+Stop the car, turn off transmitter and close the HackRF USB connection.
+Calls optional `callback` when done.
 
 ### `drive.turn180([callback])`
 
