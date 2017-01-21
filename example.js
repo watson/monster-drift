@@ -20,10 +20,9 @@ process.stdin.on('keypress', function (ch, key) {
     case 'd': drive.backwardLeft(); break
     case 'z': drive.left(); break
     case 'c': drive.right(); break
-    case 'u': drive.uturn(stop)
+    case 'u': return drive.turn180(stop) // 180 stops automatically
   }
 
-  if (key.name === 'u') return // uturn stops for us
   timer = setTimeout(stop, 150)
 
   function stop () {
