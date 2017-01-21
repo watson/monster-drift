@@ -18,6 +18,8 @@ process.stdin.on('keypress', function (ch, key) {
     case 's': drive.backward(); break
     case 'a': drive.backwardRight(); break
     case 'd': drive.backwardLeft(); break
+    case 'z': drive.left(); break
+    case 'c': drive.right(); break
     case 'u': drive.uturn(stop)
   }
 
