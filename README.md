@@ -75,9 +75,10 @@ Drive backward and turn right.
 
 Drive backward and turn left.
 
-### `drive.stop()`
+### `drive.stop([callback])`
 
-Stop the car.
+Stop the car and turn off transmitter. Calls optional `callback` when
+done.
 
 ### `drive.close()`
 
