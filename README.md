@@ -89,6 +89,29 @@ Calls optional `callback` when done.
 
 Make a 180. Calls `callback` when done.
 
+### `drive.batch(commands[, callback])`
+
+Issue a series of driving commands to the car and call optional
+`callback` when done.
+
+The `commands` argument is an array of commands. Each command is a
+double tuple with the following format: `[function, duration]`. The
+`function` part is a drive function, e.g. `drive.forward`, and the
+`duration` part is the number of milliseconds to perform the operation.
+
+If the last tuple contains a `duration` then `drive.stop` will be called
+automatically. Leave out `duratuon` to continue forever.
+
+```js
+// make a 180
+drive.batch([
+  [drive.forward, 1000],
+  [drive.right, 125],
+  [drive.backwardLeft, 100],
+  [drive.backward]
+])
+```
+
 ## License
 
 MIT

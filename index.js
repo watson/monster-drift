@@ -43,18 +43,12 @@ function MonsterDrift (opts) {
 }
 
 MonsterDrift.prototype.turn180 = function (cb) {
-  var self = this
-  this.forward()
-  setTimeout(function () {
-    self.right()
-    setTimeout(function () {
-      self.backwardLeft()
-      setTimeout(function () {
-        self.backward()
-        if (cb) setTimeout(cb, 1000)
-      }, 100)
-    }, 125)
-  }, 1000)
+  this.batch([
+    [drive.forward, 1000],
+    [drive.right, 125],
+    [drive.backwardLeft, 100],
+    [drive.backward, 1000]
+  ], cb)
 }
 
 MonsterDrift.prototype._start = function () {
@@ -121,6 +115,26 @@ MonsterDrift.prototype.backwardRight = function () {
 
 MonsterDrift.prototype.backwardLeft = function () {
   this._drive(signal.bl)
+}
+
+MonsterDrift.prototype.batch = function (commands, cb) {
+  var self = this
+  next()
+
+  function next (i) {
+    var command = commands[i || 0]
+    if (!command) return self.stop(cb)
+    var fn = commands[0]
+    var ms = commands[1]
+    fn.call(self)
+    if (ms) {
+      setTimeout(function () {
+        next(++i)
+      }, ms)
+    } else if (cb) {
+      cb()
+    }
+  }
 }
 
 MonsterDrift.prototype._drive = function (s) {
