@@ -44,10 +44,10 @@ function MonsterDrift (opts) {
 
 MonsterDrift.prototype.turn180 = function (cb) {
   this.batch([
-    [drive.forward, 1000],
-    [drive.right, 125],
-    [drive.backwardLeft, 100],
-    [drive.backward, 1000]
+    [this.forward, 1000],
+    [this.right, 125],
+    [this.backwardLeft, 100],
+    [this.backward, 1000]
   ], cb)
 }
 
