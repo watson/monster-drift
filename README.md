@@ -8,6 +8,10 @@ This is beta software.
 
 [![180 turn](http://img.youtube.com/vi/XtUH5GbOzug/0.jpg)](https://www.youtube.com/watch?v=XtUH5GbOzug)
 
+## Contributions
+
+Contributions are welcome! Add your own tricks and manoeuvres and make a Pull Request 🤕🙈✌️
+
 ## Installation
 
 ```
