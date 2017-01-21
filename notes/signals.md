@@ -1,4 +1,10 @@
-# Radio Signals
+# Monster Drift Command Protocol
+
+The monster drift car remote uses [On-Off
+Keying](https://en.wikipedia.org/wiki/On-off_keying) (OOK) modulation to
+transmit commands to the car.
+
+The protocol is described below.
 
 ## Data Symbol
 
