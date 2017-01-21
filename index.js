@@ -45,12 +45,12 @@ MonsterDrift.prototype.uturn = function (cb) {
   var self = this
   this.forward()
   setTimeout(function () {
-    self._drive(signal.r)
+    self.right()
     setTimeout(function () {
       self.backwardLeft()
       setTimeout(function () {
         self.backward()
-        setTimeout(cb, 1000)
+        if (cb) setTimeout(cb, 1000)
       }, 100)
     }, 125)
   }, 1000)
