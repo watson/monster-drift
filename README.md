@@ -1,7 +1,8 @@
 # monster-drift
 
-📻🏎 Drive a remote controlled drift car with Node.js and HackRF.
-This is beta software.
+📻🏎 Drive a radio controlled car with Node.js and HackRF. This module
+should work with most radio controlled cars operating on a frequency of
+27MHz.
 
 [![Build status](https://travis-ci.org/watson/monster-drift.svg?branch=master)](https://travis-ci.org/watson/monster-drift)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
