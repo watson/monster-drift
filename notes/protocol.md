@@ -1,10 +1,10 @@
 # Monster Drift Command Protocol
 
-The monster drift car remote uses [On-Off
+Many 27MHz radio controlled toy cars uses a simple [On-Off
 Keying](https://en.wikipedia.org/wiki/On-off_keying) (OOK) modulation to
 transmit commands to the car.
 
-The protocol is described below.
+The protocol that these car uses is described in this document.
 
 ## Data Symbol
 
