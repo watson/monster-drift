@@ -2,8 +2,10 @@
 
 ## Data Symbol
 
-Rate: 2.15632kHz
-Period: 463.753µs
+|            |            |
+| ---------- | ---------- |
+| **Rate**   | 2.15632kHz |
+| **Period** | 463.753µs  |
 
 ## Preamble
 
