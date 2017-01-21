@@ -15,11 +15,24 @@ Contributions are welcome! Add your own tricks and manoeuvres and make a Pull Re
 
 ## Installation
 
+Use from the command line:
+
+```
+npm install monster-drift --global
+```
+
+Use programmatically:
+
 ```
 npm install monster-drift --save
 ```
 
-## Usage
+## CLI Usage
+
+Simply run the `monster-drift` command to start. Use `--help` to get
+help.
+
+## Programmatic Usage
 
 Drive forward for one seconds and stop:
 

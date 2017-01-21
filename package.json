@@ -3,12 +3,13 @@
   "version": "0.5.0",
   "description": "Drive a radio controlled car with Node.js and HackRF",
   "main": "index.js",
+  "bin": "bin.js",
   "dependencies": {
     "debug": "^2.6.0",
-    "hackrf": "^3.1.1"
+    "hackrf": "^3.1.1",
+    "keypress": "^0.2.1"
   },
   "devDependencies": {
-    "keypress": "^0.2.1",
     "standard": "^8.6.0"
   },
   "scripts": {
