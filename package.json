@@ -1,6 +1,6 @@
 {
   "name": "monster-drift",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Drive a radio controlled car with Node.js and HackRF",
   "main": "index.js",
   "bin": "bin.js",
@@ -41,7 +41,7 @@
   },
   "homepage": "https://github.com/watson/monster-drift#readme",
   "coordinates": [
-    47.4880852,
-    19.0571674
+    47.4880627,
+    19.0571358
   ]
 }
