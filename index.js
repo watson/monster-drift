@@ -57,7 +57,7 @@ MonsterDrift.prototype.turn180 = function (cb) {
   }, 1000)
 }
 
-MonsterDrift.prototype.start = function () {
+MonsterDrift.prototype._start = function () {
   var self = this
   debug('starting')
   this._device.startTx(function (buf, cb) {
@@ -127,7 +127,7 @@ MonsterDrift.prototype._drive = function (s) {
   debug(s.name)
   if (this._stopTimer) clearTimeout(this._stopTimer)
   if (this._stream === s) return
-  else if (!this._stream) this.start()
+  else if (!this._stream) this._start()
 
   debug('new direction')
   this._index = 0
