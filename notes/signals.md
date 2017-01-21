@@ -16,7 +16,7 @@
 
 ## Forward
 
-Preamble + 4 x 10 data symbols
+Preamble + 4 x `10` data symbols
 
 ```
 10 10 10 10
@@ -24,7 +24,7 @@ Preamble + 4 x 10 data symbols
 
 ## Forward+Right
 
-Preamble + 28 x 10 data symbols
+Preamble + 28 x `10` data symbols
 
 ```
 10 10 10 10
@@ -37,7 +37,7 @@ Preamble + 28 x 10 data symbols
 
 ## Forward+Left
 
-Preamble + 34 x 10 data symbols
+Preamble + 34 x `10` data symbols
 
 ```
 10 10 10 10
@@ -53,7 +53,7 @@ Preamble + 34 x 10 data symbols
 
 ## Backward
 
-Preamble + 40 x 10 data symbols
+Preamble + 40 x `10` data symbols
 
 ```
 10 10 10 10
@@ -70,7 +70,7 @@ Preamble + 40 x 10 data symbols
 
 ## Backward+Left
 
-Preamble + 46 x 10 data symbols
+Preamble + 46 x `10` data symbols
 
 ```
 10 10 10 10
@@ -89,7 +89,7 @@ Preamble + 46 x 10 data symbols
 
 ## Backward+Right
 
-Preamble + 52 x 10 data symbols
+Preamble + 52 x `10` data symbols
 
 ```
 10 10 10 10
@@ -109,7 +109,7 @@ Preamble + 52 x 10 data symbols
 
 ## Wheels Right
 
-Preamble + 58 x 10 data symbols
+Preamble + 58 x `10` data symbols
 
 ```
 10 10 10 10
@@ -131,7 +131,7 @@ Preamble + 58 x 10 data symbols
 
 ## Wheels Left
 
-Preamble + 64 x 10 data symbols
+Preamble + 64 x `10` data symbols
 
 ```
 10 10 10 10
