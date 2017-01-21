@@ -6,7 +6,7 @@ This is beta software.
 [![Build status](https://travis-ci.org/watson/monster-drift.svg?branch=master)](https://travis-ci.org/watson/monster-drift)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-[![uturn](http://img.youtube.com/vi/XtUH5GbOzug/0.jpg)](https://www.youtube.com/watch?v=XtUH5GbOzug)
+[![180 turn](http://img.youtube.com/vi/XtUH5GbOzug/0.jpg)](https://www.youtube.com/watch?v=XtUH5GbOzug)
 
 ## Installation
 
@@ -83,9 +83,9 @@ Stop the car.
 
 Close the HackRF radio.
 
-### `drive.uturn([callback])`
+### `drive.turn180([callback])`
 
-Make a uturn. Calls `callback` when done.
+Make a 180. Calls `callback` when done.
 
 ## License
 

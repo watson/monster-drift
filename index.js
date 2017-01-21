@@ -42,7 +42,7 @@ function MonsterDrift (opts) {
   this._device.setFrequency(this._freq)
 }
 
-MonsterDrift.prototype.uturn = function (cb) {
+MonsterDrift.prototype.turn180 = function (cb) {
   var self = this
   this.forward()
   setTimeout(function () {
