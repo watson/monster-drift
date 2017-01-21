@@ -42,8 +42,8 @@ MonsterDrift.prototype.turn180 = function (cb) {
   this.batch([
     [this.forward, 1000],
     [this.right, 125],
-    [this.backwardLeft, 100],
-    [this.backward, 1000]
+    [this.reverseLeft, 100],
+    [this.reverse, 1000]
   ], cb)
 }
 
@@ -82,11 +82,11 @@ MonsterDrift.prototype.close = function (cb) {
 }
 
 MonsterDrift.prototype.left = function () {
-  this._drive(this._signal.l)
+  this._drive(this._signal.wl)
 }
 
 MonsterDrift.prototype.right = function () {
-  this._drive(this._signal.r)
+  this._drive(this._signal.wr)
 }
 
 MonsterDrift.prototype.forward = function () {
@@ -101,16 +101,16 @@ MonsterDrift.prototype.forwardLeft = function () {
   this._drive(this._signal.fl)
 }
 
-MonsterDrift.prototype.backward = function () {
-  this._drive(this._signal.b)
+MonsterDrift.prototype.reverse = function () {
+  this._drive(this._signal.r)
 }
 
-MonsterDrift.prototype.backwardRight = function () {
-  this._drive(this._signal.br)
+MonsterDrift.prototype.reverseRight = function () {
+  this._drive(this._signal.rr)
 }
 
-MonsterDrift.prototype.backwardLeft = function () {
-  this._drive(this._signal.bl)
+MonsterDrift.prototype.reverseLeft = function () {
+  this._drive(this._signal.rl)
 }
 
 MonsterDrift.prototype.batch = function (commands, cb) {

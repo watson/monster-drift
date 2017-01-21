@@ -15,9 +15,9 @@ process.stdin.on('keypress', function (ch, key) {
     case 'w': drive.forward(); break
     case 'q': drive.forwardRight(); break
     case 'e': drive.forwardLeft(); break
-    case 's': drive.backward(); break
-    case 'a': drive.backwardRight(); break
-    case 'd': drive.backwardLeft(); break
+    case 's': drive.reverse(); break
+    case 'a': drive.reverseRight(); break
+    case 'd': drive.reverseLeft(); break
     case 'z': drive.left(); break
     case 'c': drive.right(); break
     case 'u': return drive.turn180(stop) // 180 stops automatically

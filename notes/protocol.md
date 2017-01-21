@@ -65,7 +65,7 @@ Preamble + 34 x `10` data symbols
 10 10
 ```
 
-## Backward
+## Reverse
 
 Preamble + 40 x `10` data symbols
 
@@ -84,7 +84,7 @@ Preamble + 40 x `10` data symbols
 10 10 10 10
 ```
 
-## Backward+Left
+## Reverse+Left
 
 Preamble + 46 x `10` data symbols
 
@@ -105,7 +105,7 @@ Preamble + 46 x `10` data symbols
 10 10
 ```
 
-## Backward+Right
+## Reverse+Right
 
 Preamble + 52 x `10` data symbols
 

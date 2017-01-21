@@ -52,9 +52,9 @@ Options:
 
 Drive forward.
 
-### `drive.backward()`
+### `drive.reverse()`
 
-Drive backward.
+Drive reverse.
 
 ### `drive.left()`
 
@@ -72,11 +72,11 @@ Drive forward and right.
 
 Drive forward and left.
 
-### `drive.backwardRight()`
+### `drive.reverseRight()`
 
 Drive backward and turn right.
 
-### `drive.backwardLeft()`
+### `drive.reverseLeft()`
 
 Drive backward and turn left.
 
@@ -112,8 +112,8 @@ automatically. Leave out `duratuon` to continue forever.
 drive.batch([
   [drive.forward, 1000],
   [drive.right, 125],
-  [drive.backwardLeft, 100],
-  [drive.backward]
+  [drive.reverseLeft, 100],
+  [drive.reverse]
 ])
 ```
 
