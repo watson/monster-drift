@@ -86,7 +86,7 @@ MonsterDrift.prototype.stop = function (cb) {
 
 MonsterDrift.prototype.close = function (cb) {
   var self = this
-  this._device.stopTx(function () {
+  this.stop(function () {
     self._device.close(cb)
   })
 }
