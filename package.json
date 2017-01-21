@@ -19,7 +19,19 @@
     "url": "git+https://github.com/watson/monster-drift.git"
   },
   "keywords": [
-    "hackrf"
+    "hackrf",
+    "rf",
+    "radio",
+    "freq",
+    "frequency",
+    "car",
+    "race",
+    "racing",
+    "27",
+    "27MHz",
+    "remote",
+    "control",
+    "controlled"
   ],
   "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
   "license": "MIT",
