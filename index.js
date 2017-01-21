@@ -21,7 +21,7 @@ function MonsterDrift (opts) {
 
   var encode = ook({
     freq: this._freq,
-    gain: 30,
+    gain: 32,
     symbolPeriod: 0.463753
   })
 
@@ -34,7 +34,7 @@ function MonsterDrift (opts) {
   })
 
   this._device = devices.open(opts.id || 0)
-  this._device.setTxGain(opts.gain || 40) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
+  this._device.setTxGain(opts.gain || 30) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
   this._device.setFrequency(this._freq)
 }
 
