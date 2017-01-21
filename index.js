@@ -3,27 +3,9 @@
 var debug = require('debug')('monster-drift')
 delete process.env.DEBUG // hackrf doesn't like this flag
 
-var fs = require('fs')
 var devices = require('hackrf')()
-
-var signal = {
-  f: fs.readFileSync('./recordings/car-f.raw'),
-  b: fs.readFileSync('./recordings/car-b.raw'),
-  l: fs.readFileSync('./recordings/car-r.raw'),
-  r: fs.readFileSync('./recordings/car-l.raw'),
-  fr: fs.readFileSync('./recordings/car-fl.raw'),
-  fl: fs.readFileSync('./recordings/car-fr.raw'),
-  br: fs.readFileSync('./recordings/car-bl.raw'),
-  bl: fs.readFileSync('./recordings/car-br.raw')
-}
-signal.f.name = 'forward'
-signal.b.name = 'backward'
-signal.l.name = 'left'
-signal.r.name = 'right'
-signal.fr.name = 'forward/right'
-signal.fl.name = 'forward/left'
-signal.br.name = 'backward/right'
-signal.bl.name = 'backward/left'
+var ook = require('./lib/ook')
+var commands = require('./lib/commands')
 
 module.exports = MonsterDrift
 
@@ -31,11 +13,25 @@ function MonsterDrift (opts) {
   if (!(this instanceof MonsterDrift)) return new MonsterDrift()
   if (!opts) opts = {}
 
-  this._freq = opts.freq || 27e6
+  this._freq = opts.freq || 27143550
   this._index = 0
   this._stream = null
   this._stopIn = opts.stop || null
   this._stopTimer = null
+
+  var encode = ook({
+    freq: this._freq,
+    gain: 30,
+    symbolPeriod: 0.463753
+  })
+
+  var self = this
+  this._signal = {}
+  Object.keys(commands).forEach(function (key) {
+    var cmd = commands[key]
+    self._signal[key] = encode(Array(100).join(cmd[0]))
+    self._signal[key].name = cmd[1]
+  })
 
   this._device = devices.open(opts.id || 0)
   this._device.setTxGain(opts.gain || 40) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
@@ -86,35 +82,35 @@ MonsterDrift.prototype.close = function (cb) {
 }
 
 MonsterDrift.prototype.left = function () {
-  this._drive(signal.l)
+  this._drive(this._signal.l)
 }
 
 MonsterDrift.prototype.right = function () {
-  this._drive(signal.r)
+  this._drive(this._signal.r)
 }
 
 MonsterDrift.prototype.forward = function () {
-  this._drive(signal.f)
+  this._drive(this._signal.f)
 }
 
 MonsterDrift.prototype.forwardRight = function () {
-  this._drive(signal.fr)
+  this._drive(this._signal.fr)
 }
 
 MonsterDrift.prototype.forwardLeft = function () {
-  this._drive(signal.fl)
+  this._drive(this._signal.fl)
 }
 
 MonsterDrift.prototype.backward = function () {
-  this._drive(signal.b)
+  this._drive(this._signal.b)
 }
 
 MonsterDrift.prototype.backwardRight = function () {
-  this._drive(signal.br)
+  this._drive(this._signal.br)
 }
 
 MonsterDrift.prototype.backwardLeft = function () {
-  this._drive(signal.bl)
+  this._drive(this._signal.bl)
 }
 
 MonsterDrift.prototype.batch = function (commands, cb) {

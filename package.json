@@ -12,7 +12,6 @@
     "standard": "^8.6.0"
   },
   "scripts": {
-    "postinstall": "./scripts/postinstall.sh",
     "test": "standard"
   },
   "repository": {
