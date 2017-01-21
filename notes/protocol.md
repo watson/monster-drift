@@ -1,4 +1,4 @@
-# Monster Drift Command Protocol
+# 27MHz Radio Controlled Toy Car Command Protocol
 
 Many 27MHz radio controlled toy cars uses a simple [On-Off
 Keying](https://en.wikipedia.org/wiki/On-off_keying) (OOK) modulation to
