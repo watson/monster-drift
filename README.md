@@ -66,19 +66,19 @@ Turn wheels right.
 
 ### `drive.forwardRight()`
 
-Drive forward and right.
+Drive forward while turning right.
 
 ### `drive.forwardLeft()`
 
-Drive forward and left.
+Drive forward while turning left.
 
 ### `drive.reverseRight()`
 
-Drive backward and turn right.
+Drive reverse while turning right.
 
 ### `drive.reverseLeft()`
 
-Drive backward and turn left.
+Drive reverse while turning left.
 
 ### `drive.stop([callback])`
 
