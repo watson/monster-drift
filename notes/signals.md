@@ -27,7 +27,9 @@ Preamble + 4 x `10` data symbols
 Preamble + 28 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -40,7 +42,9 @@ Preamble + 28 x `10` data symbols
 Preamble + 34 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -56,7 +60,9 @@ Preamble + 34 x `10` data symbols
 Preamble + 40 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -73,7 +79,9 @@ Preamble + 40 x `10` data symbols
 Preamble + 46 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -92,7 +100,9 @@ Preamble + 46 x `10` data symbols
 Preamble + 52 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -112,7 +122,9 @@ Preamble + 52 x `10` data symbols
 Preamble + 58 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
@@ -134,7 +146,9 @@ Preamble + 58 x `10` data symbols
 Preamble + 64 x `10` data symbols
 
 ```
-10 10 10 10
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
 10 10 10 10
 10 10 10 10
