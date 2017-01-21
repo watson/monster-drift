@@ -69,7 +69,7 @@ MonsterDrift.prototype._start = function () {
 }
 
 MonsterDrift.prototype.stop = function (cb) {
-  if (!this._stream) return
+  if (!this._stream) return cb()
   debug('stopping')
   this._stream = null
   this._device.stopTx(function () {
