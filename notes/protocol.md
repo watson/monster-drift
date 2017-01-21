@@ -32,7 +32,7 @@ Preamble + 10 x `10` data symbols
 10 10
 ```
 
-## Forward+Right
+## Forward+Left
 
 Preamble + 28 x `10` data symbols
 
@@ -47,7 +47,7 @@ Preamble + 28 x `10` data symbols
 10 10 10 10
 ```
 
-## Forward+Left
+## Forward+Right
 
 Preamble + 34 x `10` data symbols
 
