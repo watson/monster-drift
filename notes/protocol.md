@@ -22,10 +22,14 @@ The protocol is described below.
 
 ## Forward
 
-Preamble + 4 x `10` data symbols
+Preamble + 10 x `10` data symbols
 
 ```
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
 10 10 10 10
+10 10
 ```
 
 ## Forward+Right
