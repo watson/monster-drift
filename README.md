@@ -37,6 +37,8 @@ a `drive` object.
 
 Options:
 
+- `stop` - Milliseconds in which to automatically stop the card if no
+  drive commands have been issued (default: never)
 - `freq` - The frequency in Hz (default: 27MHz)
 - `id` - The HackRF device id to use (default: `0`)
 - `gain` - The HackRF TX gain (default: `40`)

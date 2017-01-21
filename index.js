@@ -29,12 +29,13 @@ module.exports = MonsterDrift
 
 function MonsterDrift (opts) {
   if (!(this instanceof MonsterDrift)) return new MonsterDrift()
-
   if (!opts) opts = {}
 
   this._freq = opts.freq || 27e6
   this._index = 0
   this._stream = null
+  this._stopIn = opts.stop || null
+  this._stopTimer = null
 
   this._device = devices.open(opts.id || 0)
   this._device.setTxGain(opts.gain || 40) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
@@ -124,10 +125,18 @@ MonsterDrift.prototype.backwardLeft = function () {
 
 MonsterDrift.prototype._drive = function (s) {
   debug(s.name)
+  if (this._stopTimer) clearTimeout(this._stopTimer)
   if (this._stream === s) return
   else if (!this._stream) this.start()
 
   debug('new direction')
   this._index = 0
   this._stream = s
+
+  if (this._stopIn) {
+    var self = this
+    this._stopTimer = setTimeout(function () {
+      self.stop()
+    }, this._stopIn)
+  }
 }
