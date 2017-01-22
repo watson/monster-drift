@@ -8,10 +8,10 @@ The protocol that these car uses is described in this document.
 
 ## Data Symbol
 
-|            |            |
-| ---------- | ---------- |
-| **Rate**   | 2.15632kHz |
-| **Period** | 463.753µs  |
+|            |           |
+| ---------- | --------- |
+| **Rate**   | 2.1561kHz |
+| **Period** | 463.8µs   |
 
 ## Preamble
 
