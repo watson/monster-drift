@@ -31,7 +31,7 @@ function MonsterDrift (opts) {
   this._signal = {}
   Object.keys(commands).forEach(function (key) {
     var cmd = commands[key]
-    self._signal[key] = encode(Array(100).join(cmd[0]))
+    self._signal[key] = encode(cmd[0])
     self._signal[key].name = cmd[1]
   })
 
