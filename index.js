@@ -81,36 +81,36 @@ MonsterDrift.prototype.close = function (cb) {
   })
 }
 
-MonsterDrift.prototype.left = function () {
-  this._drive(this._signal.wl)
-}
-
-MonsterDrift.prototype.right = function () {
-  this._drive(this._signal.wr)
-}
-
 MonsterDrift.prototype.forward = function () {
   this._drive(this._signal.f)
-}
-
-MonsterDrift.prototype.forwardRight = function () {
-  this._drive(this._signal.fr)
 }
 
 MonsterDrift.prototype.forwardLeft = function () {
   this._drive(this._signal.fl)
 }
 
+MonsterDrift.prototype.forwardRight = function () {
+  this._drive(this._signal.fr)
+}
+
 MonsterDrift.prototype.reverse = function () {
   this._drive(this._signal.r)
+}
+
+MonsterDrift.prototype.reverseLeft = function () {
+  this._drive(this._signal.rl)
 }
 
 MonsterDrift.prototype.reverseRight = function () {
   this._drive(this._signal.rr)
 }
 
-MonsterDrift.prototype.reverseLeft = function () {
-  this._drive(this._signal.rl)
+MonsterDrift.prototype.right = function () {
+  this._drive(this._signal.wr)
+}
+
+MonsterDrift.prototype.left = function () {
+  this._drive(this._signal.wl)
 }
 
 MonsterDrift.prototype.batch = function (commands, cb) {
