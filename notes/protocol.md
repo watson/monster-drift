@@ -68,7 +68,7 @@ Preamble + 22 x `10` data symbols
 
 **Note:** This is untested and teoretical.
 
-## Forward+Left
+## Forward+Right
 
 Preamble + 28 x `10` data symbols
 
@@ -83,7 +83,7 @@ Preamble + 28 x `10` data symbols
 10 10 10 10
 ```
 
-## Forward+Right
+## Forward+Left
 
 Preamble + 34 x `10` data symbols
 
@@ -120,7 +120,7 @@ Preamble + 40 x `10` data symbols
 10 10 10 10
 ```
 
-## Reverse+Right
+## Reverse+Left
 
 Preamble + 46 x `10` data symbols
 
@@ -141,7 +141,7 @@ Preamble + 46 x `10` data symbols
 10 10
 ```
 
-## Reverse+Left
+## Reverse+Right
 
 Preamble + 52 x `10` data symbols
 

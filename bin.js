@@ -37,11 +37,11 @@ function run () {
 
     switch (key.name) {
       case 'w': drive.forward(); break
-      case 'q': drive.forwardRight(); break
-      case 'e': drive.forwardLeft(); break
+      case 'q': drive.forwardLeft(); break
+      case 'e': drive.forwardRight(); break
       case 's': drive.reverse(); break
-      case 'a': drive.reverseRight(); break
-      case 'd': drive.reverseLeft(); break
+      case 'a': drive.reverseLeft(); break
+      case 'd': drive.reverseRight(); break
       case 'z': drive.left(); break
       case 'c': drive.right(); break
       case 'u': return drive.turn180(stop) // 180 stops automatically
