@@ -13,7 +13,7 @@ function MonsterDrift (opts) {
   if (!(this instanceof MonsterDrift)) return new MonsterDrift()
   if (!opts) opts = {}
 
-  this._freq = opts.freq || 27143550
+  this._freq = opts.freq || 27143550 // probably channel 19: 27.145 (yellow)
   this._index = 0
   this._stream = null
   this._speed = opts.speed || 1
