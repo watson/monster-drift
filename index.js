@@ -23,7 +23,7 @@ function MonsterDrift (opts) {
 
   var encode = ook({
     freq: this._freq,
-    gain: 32,
+    gain: 127,
     symbolPeriod: 0.4638
   })
 
