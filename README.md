@@ -66,8 +66,9 @@ Options:
 - `stop` - Milliseconds in which to automatically stop the card if no
   drive commands have been issued (default: never)
 - `id` - The HackRF device id to use (default: `0`)
-- `gain` - The HackRF TX gain (default: `40`)
-- `sampleRate` - The sample rate used when transmitting
+- `gain` - The HackRF TX gain (default: `30`)
+- `sampleRate` - The sample rate used when transmitting (default:
+  `10e6`)
 
 ### `drive.forward([speed])`
 
