@@ -48,6 +48,8 @@ setTimeout(function () {
 
 ## API
 
+Some cars might not support all commands.
+
 ### `var drive = new MonsterDrift([options])`
 
 This module exposes a `MonsterDrift` object that you can initiate to get
