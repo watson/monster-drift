@@ -15,7 +15,15 @@ else run()
 function run () {
   console.log('Connecting to radio...')
 
-  drive = new MonsterDrift({swaplr: argv.swaplr})
+  drive = new MonsterDrift({
+    channel: argv.c || argv.channel,
+    freq: argv.f || argv.freq,
+    speed: argv.speed,
+    swaplr: argv.swaplr,
+    id: argv.d || argv.id,
+    gain: argv.gain,
+    sampleRate: argv['sample-rate']
+  })
 
   console.log('Found radio!')
   console.log('Use keys to drive - Run with --help for details')
@@ -55,9 +63,15 @@ Usage:
   monster-drift [options]
 
 Options:
-  -h, --help     Show this message
-  -v, --version  Show version
-  --swaplr       Invert left/right stearing
+  -h, --help       Show this message
+  -v, --version    Show version
+  -c, --channel=N  Set transmit channel (default: 19)
+  --freq=Hz        Set transmit frequency (overwrites --channel)
+  --speed=N        Set default forward speed (1-3, default: 1)
+  --swaplr         Invert left/right stearing
+  -d, --id         HackRF device id (default: 0)
+  --gain           HackRF TX gain (default: 30)
+  --sample-rate    Sample rate used when transmitting (default: 10e6)
 
 Use the keyboard to drive.
 
