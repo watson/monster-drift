@@ -6,6 +6,8 @@ transmit commands to the car.
 
 The protocol that these car uses is described in this document.
 
+Note that some cars will revert left and right!
+
 ## Data Symbol
 
 |            |           |

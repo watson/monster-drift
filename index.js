@@ -16,6 +16,7 @@ function MonsterDrift (opts) {
   this._freq = opts.freq || 27143550
   this._index = 0
   this._stream = null
+  this._inversed = opts.swaplr || false
   this._stopIn = opts.stop || null
   this._stopTimer = null
 
@@ -86,11 +87,11 @@ MonsterDrift.prototype.forward = function () {
 }
 
 MonsterDrift.prototype.forwardLeft = function () {
-  this._drive(this._signal.fl)
+  this._drive(this._inversed ? this._signal.fr : this._signal.fl)
 }
 
 MonsterDrift.prototype.forwardRight = function () {
-  this._drive(this._signal.fr)
+  this._drive(this._inversed ? this._signal.fl : this._signal.fr)
 }
 
 MonsterDrift.prototype.reverse = function () {
@@ -98,19 +99,19 @@ MonsterDrift.prototype.reverse = function () {
 }
 
 MonsterDrift.prototype.reverseLeft = function () {
-  this._drive(this._signal.rl)
+  this._drive(this._inversed ? this._signal.rr : this._signal.rl)
 }
 
 MonsterDrift.prototype.reverseRight = function () {
-  this._drive(this._signal.rr)
+  this._drive(this._inversed ? this._signal.rl : this._signal.rr)
 }
 
 MonsterDrift.prototype.right = function () {
-  this._drive(this._signal.wr)
+  this._drive(this._inversed ? this._signal.wl : this._signal.wr)
 }
 
 MonsterDrift.prototype.left = function () {
-  this._drive(this._signal.wl)
+  this._drive(this._inversed ? this._signal.wr : this._signal.wl)
 }
 
 MonsterDrift.prototype.batch = function (commands, cb) {
