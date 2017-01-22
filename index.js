@@ -16,6 +16,7 @@ function MonsterDrift (opts) {
   this._freq = opts.freq || 27143550
   this._index = 0
   this._stream = null
+  this._speed = opts.speed || 1
   this._inversed = opts.swaplr || false
   this._stopIn = opts.stop || null
   this._stopTimer = null
@@ -82,8 +83,12 @@ MonsterDrift.prototype.close = function (cb) {
   })
 }
 
-MonsterDrift.prototype.forward = function () {
-  this._drive(this._signal.f)
+MonsterDrift.prototype.forward = function (speed) {
+  switch (speed || this._speed) {
+    case 3: return this._drive(this._signal.fff)
+    case 2: return this._drive(this._signal.ff)
+    default: this._drive(this._signal.f)
+  }
 }
 
 MonsterDrift.prototype.forwardLeft = function () {

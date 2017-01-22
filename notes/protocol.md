@@ -22,7 +22,7 @@ Note that some cars will revert left and right!
 1110 1110
 ```
 
-## Forward
+## Forward (speed 1)
 
 Preamble + 10 x `10` data symbols
 
@@ -33,6 +33,40 @@ Preamble + 10 x `10` data symbols
 10 10 10 10
 10 10
 ```
+
+## Forward (speed 2)
+
+Preamble + 16 x `10` data symbols
+
+```
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
+10 10 10 10
+10 10 10 10
+10 10 10 10
+```
+
+**Note:** This is untested but seen in specs found online.
+
+**Observation:** Some cars will interpret this as speed 1.
+
+## Forward (speed 3)
+
+Preamble + 22 x `10` data symbols
+
+```
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
+10 10 10 10
+10 10 10 10
+10 10 10 10
+10 10 10 10
+10 10
+```
+
+**Note:** This is untested and teoretical.
 
 ## Forward+Left
 
