@@ -7,7 +7,8 @@
   "dependencies": {
     "debug": "^2.6.0",
     "hackrf": "^3.1.1",
-    "keypress": "^0.2.1"
+    "keypress": "^0.2.1",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "standard": "^8.6.0"

@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 'use strict'
 
+var argv = require('minimist')(process.argv.slice(2))
 var keypress = require('keypress')
 var MonsterDrift = require('./')
 var pkg = require('./package')
 
-var arg = process.argv[2]
 var drive, timer
 
-if (arg === '-h' || arg === '--help') help()
-else if (arg === '-v' || arg === '--version') version()
+if (argv.h || argv.help) help()
+else if (argv.v || argv.version) version()
 else run()
 
 function run () {
   console.log('Connecting to radio...')
 
-  drive = new MonsterDrift()
+  drive = new MonsterDrift({swaplr: argv.swaplr})
 
   console.log('Found radio!')
   console.log('Use keys to drive - Run with --help for details')
@@ -56,6 +56,7 @@ Usage:
 Options:
   -h, --help     Show this message
   -v, --version  Show version
+  --swaplr       Invert left/right stearing
 
 Use the keyboard to drive.
 
