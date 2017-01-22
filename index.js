@@ -124,10 +124,11 @@ MonsterDrift.prototype.batch = function (commands, cb) {
   next()
 
   function next (i) {
-    var command = commands[i || 0]
+    i = i || 0
+    var command = commands[i]
     if (!command) return self.stop(cb)
-    var fn = commands[0]
-    var ms = commands[1]
+    var fn = command[0]
+    var ms = command[1]
     fn.call(self)
     if (ms) {
       setTimeout(function () {
