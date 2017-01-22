@@ -57,14 +57,14 @@ a `drive` object.
 
 Options:
 
-- `stop` - Milliseconds in which to automatically stop the card if no
-  drive commands have been issued (default: never)
 - `channel` - The channel to transmit on in [the 27 MHz
   band](http://www.ukrcc.org/27mhz.html) (default: `19`)
 - `freq` - The frequency in Hz to transmit on (overwrites `channel`)
 - `speed` - The default forward speed. Must be between 1 and 3 (default:
   `1`). Can be overwritten with `drive.forward(speed)` (experimental)
 - `swaplr` - Boolean for inversing left and right (default: `false`)
+- `stop` - Milliseconds in which to automatically stop the card if no
+  drive commands have been issued (default: never)
 - `id` - The HackRF device id to use (default: `0`)
 - `gain` - The HackRF TX gain (default: `40`)
 
