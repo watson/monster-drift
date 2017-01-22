@@ -73,6 +73,8 @@ Tricks:
   u: Turn 180
 
 Exit by pressing ctrl+c
+
+P.S. A high key-repeat will improve the experience :)
   `)
 }
 
