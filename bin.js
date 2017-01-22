@@ -22,6 +22,7 @@ function run () {
 
   keypress(process.stdin)
   process.stdin.on('keypress', function (ch, key) {
+    if (!key) return
     if (key && key.ctrl && key.name === 'c') return exit()
 
     clearTimeout(timer)
