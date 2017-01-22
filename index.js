@@ -14,19 +14,19 @@ function MonsterDrift (opts) {
   if (!(this instanceof MonsterDrift)) return new MonsterDrift()
   if (!opts) opts = {}
 
-  this._freq = opts.freq ? opts.freq : channel(opts.channel || 19)
-  this._sampleRate = opts.sampleRate || 10e6
+  var freq = opts.freq ? opts.freq : channel(opts.channel || 19)
+  var sampleRate = opts.sampleRate || 10e6
+
   this._index = 0
   this._stream = null
   this._speed = opts.speed || 1
-  this._inversed = opts.swaplr || false
+  this._inverted = opts.swaplr || false
   this._stopIn = opts.stop || null
   this._stopTimer = null
 
   var encode = ook({
-    freq: this._freq,
-    sampleRate: this._sampleRate,
-    gain: 127,
+    freq: freq,
+    sampleRate: sampleRate,
     symbolPeriod: 0.4638
   })
 
@@ -40,8 +40,8 @@ function MonsterDrift (opts) {
 
   this._device = devices.open(opts.id || 0)
   this._device.setTxGain(opts.gain || 30) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
-  this._device.setFrequency(this._freq)
-  this._device.setSampleRate(this._sampleRate)
+  this._device.setFrequency(freq)
+  this._device.setSampleRate(sampleRate)
 }
 
 MonsterDrift.prototype.turn180 = function (cb) {
@@ -96,11 +96,11 @@ MonsterDrift.prototype.forward = function (speed) {
 }
 
 MonsterDrift.prototype.forwardLeft = function () {
-  this._drive(this._inversed ? this._signal.fr : this._signal.fl)
+  this._drive(this._inverted ? this._signal.fr : this._signal.fl)
 }
 
 MonsterDrift.prototype.forwardRight = function () {
-  this._drive(this._inversed ? this._signal.fl : this._signal.fr)
+  this._drive(this._inverted ? this._signal.fl : this._signal.fr)
 }
 
 MonsterDrift.prototype.reverse = function () {
@@ -108,19 +108,19 @@ MonsterDrift.prototype.reverse = function () {
 }
 
 MonsterDrift.prototype.reverseLeft = function () {
-  this._drive(this._inversed ? this._signal.rr : this._signal.rl)
+  this._drive(this._inverted ? this._signal.rr : this._signal.rl)
 }
 
 MonsterDrift.prototype.reverseRight = function () {
-  this._drive(this._inversed ? this._signal.rl : this._signal.rr)
+  this._drive(this._inverted ? this._signal.rl : this._signal.rr)
 }
 
 MonsterDrift.prototype.right = function () {
-  this._drive(this._inversed ? this._signal.wl : this._signal.wr)
+  this._drive(this._inverted ? this._signal.wl : this._signal.wr)
 }
 
 MonsterDrift.prototype.left = function () {
-  this._drive(this._inversed ? this._signal.wr : this._signal.wl)
+  this._drive(this._inverted ? this._signal.wr : this._signal.wl)
 }
 
 MonsterDrift.prototype.batch = function (commands, cb) {
