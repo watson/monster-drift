@@ -1,10 +1,8 @@
 'use strict'
 
-var debug = require('debug')('monster-drift')
-delete process.env.DEBUG // hackrf doesn't like this flag
-
 var channel = require('27mhz')
 var devices = require('hackrf')()
+var debug = require('debug')('monster-drift')
 var ook = require('./lib/ook')
 var commands = require('./lib/commands')
 
