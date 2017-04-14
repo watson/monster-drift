@@ -70,7 +70,7 @@ Options:
   --speed=N        Set default forward speed (1-3, default: 1)
   --swaplr         Invert left/right stearing
   -d, --id         HackRF device id (default: 0)
-  --gain           HackRF TX gain (default: 30)
+  --gain           HackRF TX gain (default: 47)
   --sample-rate    Sample rate used when transmitting (default: 10e6)
 
 Use the keyboard to drive.

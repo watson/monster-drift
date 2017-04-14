@@ -37,7 +37,7 @@ function MonsterDrift (opts) {
   })
 
   this._device = devices.open(opts.id || 0)
-  this._device.setTxGain(opts.gain || 30) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
+  this._device.setTxGain(opts.gain || 47) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
   this._device.setFrequency(freq)
   this._device.setSampleRate(sampleRate)
 }
