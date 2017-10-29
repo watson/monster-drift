@@ -67,8 +67,7 @@ Options:
   drive commands have been issued (default: never)
 - `id` - The HackRF device id to use (default: `0`)
 - `gain` - The HackRF TX gain (0-47 dB in 1 dB steps, default: `47`)
-- `sampleRate` - The sample rate used when transmitting (default:
-  `10e6`)
+- `sampleRate` - The sample rate used when transmitting (default: `8e6`)
 
 ### `drive.forward([speed])`
 

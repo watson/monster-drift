@@ -71,7 +71,7 @@ Options:
   --swaplr         Invert left/right stearing
   -d, --id         HackRF device id (default: 0)
   --gain           HackRF TX gain (0-47 dB in 1 dB steps, default: 47)
-  --sample-rate    Sample rate used when transmitting (default: 10e6)
+  --sample-rate    Sample rate used when transmitting (default: 8e6)
 
 Use the keyboard to drive.
 

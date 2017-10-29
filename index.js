@@ -13,7 +13,7 @@ function MonsterDrift (opts) {
   if (!opts) opts = {}
 
   var freq = opts.freq ? opts.freq : channel(opts.channel || 19)
-  var sampleRate = opts.sampleRate || 10e6
+  var sampleRate = opts.sampleRate || 8e6
 
   this._index = 0
   this._stream = null
