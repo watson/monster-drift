@@ -22,6 +22,19 @@ Note that some cars will revert left and right!
 1110 1110
 ```
 
+## Stop
+
+Preamble + 4 x `10` data symbols
+
+```
+11 10 11 10 # preamble
+11 10 11 10
+10 10 10 10 # command
+```
+
+This is normally sent automatically when you release the remote control
+trigger.
+
 ## Forward (speed 1)
 
 Preamble + 10 x `10` data symbols
