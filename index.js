@@ -55,14 +55,13 @@ MonsterDrift.prototype._start = function () {
   var self = this
   debug('starting')
   this._device.startTx(function (buf, cb) {
-    var i
     if (self._stream) {
-      for (i = 0; i < buf.length; i++) {
+      for (var i = 0; i < buf.length; i++) {
         buf[i] = self._stream[self._index++]
         if (self._index === self._stream.length) self._index = 0
       }
     } else {
-      for (i = 0; i < buf.length; i++) buf[i] = 0
+      buf.fill(0)
     }
     cb()
   })
