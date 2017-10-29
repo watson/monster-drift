@@ -12,7 +12,8 @@ function MonsterDrift (opts) {
   if (!(this instanceof MonsterDrift)) return new MonsterDrift()
   if (!opts) opts = {}
 
-  var freq = opts.freq ? opts.freq : channel(opts.channel || 19)
+  var tuningFreq = opts.freq ? opts.freq - 100e3 : 27e6
+  var offsetFreq = opts.freq ? 100e3 : channel(opts.channel || 19) - 27e6
   var sampleRate = opts.sampleRate || 8e6
 
   this._index = 0
@@ -23,6 +24,7 @@ function MonsterDrift (opts) {
   this._stopTimer = null
 
   var encode = ook({
+    freq: offsetFreq,
     sampleRate: sampleRate,
     symbolPeriod: 0.4638 // in milliseconds
   })
@@ -37,7 +39,7 @@ function MonsterDrift (opts) {
 
   this._device = devices.open(opts.id || 0)
   this._device.setTxGain(opts.gain || 47) // TX VGA (IF) gain, 0-47 dB in 1 dB steps
-  this._device.setFrequency(freq)
+  this._device.setFrequency(tuningFreq)
   this._device.setSampleRate(sampleRate)
 }
 
